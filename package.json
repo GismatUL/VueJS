@@ -20,6 +20,7 @@
         "vue-template-compiler": "^2.7.15"
     },
     "dependencies": {
-        "vue-router": "^4.0.13"
+        "@vue/compiler-sfc": "^3.2.31",
+        "vue-router": "4"
     }
 }

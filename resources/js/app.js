@@ -1,11 +1,19 @@
 require('./bootstrap');
 
 import { createApp } from 'vue';
+import * as VueRouter from 'vue-router'
 
-import MainApp from './components/mainApp.vue';
+import ExampleComponent from "./components/ExampleComponent";
+import AboutComponent from "./components/AboutComponent";
 
-const app = createApp(MainApp);
+const routes = [
+    {path: '/', component:ExampleComponent},
+    {path: '/about', component:AboutComponent},
+];
+const router = VueRouter.createRouter({
+    history: VueRouter.
+})
+const app = createApp({});
 
-app.component('mainApp', MainApp);
-
-app.mount('#app',router);
+app.component('example-component',ExampleComponent)
+app.mount("#app")
