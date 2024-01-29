@@ -21,3 +21,5 @@ Route::get('/pathMatch', function () {
     return view('welcome');
 })->where('pathMatch','.*');
 Route::get('vue',[\App\Http\Controllers\TestController::class,'test']);
+Route::post('insertData',[\App\Http\Controllers\NewsController::class,'insertFromAPI']);
+

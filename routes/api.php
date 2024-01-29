@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('getData',[\App\Http\Controllers\NewsController::class,'getData']);
+Route::get('edit/{id}',[\App\Http\Controllers\NewsController::class,'edit']);
+Route::put('edit/{id}',[\App\Http\Controllers\NewsController::class,'update']);
+Route::delete('delete/{id}',[\App\Http\Controllers\NewsController::class,'delete']);
+Route::post('insertData',[\App\Http\Controllers\NewsController::class,'createData']);
+// http://localhost:8000/api/getData
